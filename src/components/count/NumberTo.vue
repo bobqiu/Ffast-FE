@@ -109,6 +109,14 @@
       }
     },
     methods: {
+      initCnt(endVal){
+        this.counter = new CountUpC(this.countId, this.startVal, endVal, this.decimals, this.duration, {
+          useEasing: !this.uneasing,
+          useGrouping: !this.ungroup,
+          separator: this.separator,
+          decimal: this.decimal
+        });
+      },
       transformValue (val) {
         let endVal = 0;
         let unit = '';
@@ -146,14 +154,15 @@
             endVal = this.endVal;
           }
           let counter = {};
-          this.counter = counter = new CountUpC(this.countId, this.startVal, endVal, this.decimals, this.duration, {
+         /* this.counter = counter = new CountUpC(this.countId, this.startVal, endVal, this.decimals, this.duration, {
             useEasing: !this.uneasing,
             useGrouping: !this.ungroup,
             separator: this.separator,
             decimal: this.decimal
-          });
-          if (!counter.error) {
-            counter.start();
+          });*/
+         this.initCnt(endVal);
+          if (!this.counter.error) {
+            this.counter.start();
           }
         }, this.delay);
       });
@@ -168,7 +177,20 @@
         } else {
           endVal = this.endVal;
         }
-        this.counter.update(endVal);
+        this.initCnt(endVal);
+        /*this.counter = new CountUpC(this.countId, this.startVal, endVal, this.decimals, this.duration, {
+          useEasing: !this.uneasing,
+          useGrouping: !this.ungroup,
+          separator: this.separator,
+          decimal: this.decimal
+        });*/
+       this.counter.update(endVal);
+      /*  this.$nextTick(() => {
+          setTimeout(() => {
+            this.demo.update(endVal);
+          }, this.delay);
+        });*/
+
       }
     }
   };
