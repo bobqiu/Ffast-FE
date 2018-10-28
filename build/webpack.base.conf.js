@@ -12,7 +12,8 @@ function resolve(dir) {
 
 //var DEV_HOST = projectConfig.devHost + projectConfig.apiPrefix;
 var DEV_HOST = projectConfig.apiPrefix;
-var PUB_HOST = projectConfig.pubHost + projectConfig.apiPrefix;
+//var PUB_HOST = projectConfig.pubHost + projectConfig.apiPrefix;
+var PUB_HOST = projectConfig.apiPrefix;
 
 module.exports = {
   entry: {
