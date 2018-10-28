@@ -1,7 +1,7 @@
 <style scoped>
   .api-ul {
     height: calc(100vh - 120px);
-    margin: 0px 5px 0px 20px;
+    margin: 15px 5px 0px 20px;
     padding-right: 20px;
     overflow: auto;
     border-left: #F5F7F9 2px solid;
@@ -72,7 +72,7 @@
                     <td><Input type="text" size="small" v-model="item.value" placeholder="值"></Input></td>
                     <td>
                       <Button type="ghost" size="small" @click="handleRemove(index)">删除</Button>
-                      </Input></td>
+                      </td>
                   </tr>
                 </template>
               </table>

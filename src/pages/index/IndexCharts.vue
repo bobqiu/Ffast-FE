@@ -9,11 +9,11 @@
   <Row :gutter='20'>
     <i-col span='6'>
       <Card :bordered='false' style='height: 155px'>
-        <Tooltip class='count-tip' content='年度新注册量' placement='left'>
+        <Tooltip class='count-tip' content='年度新注册量11111' placement='left'>
           <Icon type='information-circled'></Icon>
         </Tooltip>
         <div>
-          <NumberUd color='#5c6b77' textAlign='left' :countSize='30' :endVal='countData.data1.count' title='年度新注册量'
+          <NumberUd color='#5c6b77' textAlign='left' :countSize='30' :endVal='countData.data1.count' title='年度新注册量111'
                     rightText='人'></NumberUd>
         </div>
         <div id='chart1' style='height: 60px;width: 95%;'></div>
@@ -21,7 +21,7 @@
     </i-col>
     <i-col span='6'>
       <Card :bordered='false' style='height: 155px'>
-        <Tooltip class='count-tip' content='本月每日新注册量统计' placement='left'>
+        <Tooltip class='count-tip' content='本月每日新注册量统计11111' placement='left'>
           <Icon type='information-circled'></Icon>
         </Tooltip>
         <div>

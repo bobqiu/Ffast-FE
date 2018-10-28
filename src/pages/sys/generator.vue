@@ -1,5 +1,5 @@
 <template>
-  <div class="main-view main-view-full" style="padding-top: 50px">
+  <div class="main-view main-view-full" style="padding-top: 10px">
     <row style="height: 700px">
       <i-col span="18">
         <formDynamic ref="generatorDynamic" :data="generatorDynamic" :label-width="100">

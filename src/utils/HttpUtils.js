@@ -10,6 +10,7 @@ const timeoutMsg = () => {
 
 const http = {
   apiGet(url, data) {
+    console.log("httputils.url:" + url);
     return new Promise((resolve, reject) => {
       axios.get(url, data).then((response) => {
         resolve(response.data);

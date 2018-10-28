@@ -10,7 +10,8 @@ function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
-var DEV_HOST = projectConfig.devHost + projectConfig.apiPrefix;
+//var DEV_HOST = projectConfig.devHost + projectConfig.apiPrefix;
+var DEV_HOST = projectConfig.apiPrefix;
 var PUB_HOST = projectConfig.pubHost + projectConfig.apiPrefix;
 
 module.exports = {
@@ -40,6 +41,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       HOST: "'" + (process.env.NODE_ENV === 'production' ? PUB_HOST : DEV_HOST) + "'"
+      //HOST: "'" + (process.env.NODE_ENV === 'production' ? PUB_HOST : DEV_HOST) + "'"
     }),
 
   ],
