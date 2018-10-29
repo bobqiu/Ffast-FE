@@ -36,7 +36,7 @@
       <Sidebar :menuSmall="menuSmall"></Sidebar>
       <div class="ease-in-out" :class="menuSmall?'layout-right-small':'layout-right'">
         <Navbar :toggleClick="toggleClick"></Navbar>
-        <Levelbar :showTabs="true"></Levelbar>
+        <Levelbar :showTabs=false></Levelbar>
         <Content :menuSmall="menuSmall"></Content>
         <Footer></Footer>
       </div>

@@ -37,13 +37,13 @@
         <Tag
           @click.native="tagClick(item.url)"
           :closable="index==hoverIndex"
-          :type="item.url==curPath ?'':'border'"
+          :type="item.url==curPath ?'dot':'border'"
           :color="item.url==curPath ?'#5c6b77':''"
           @mouseleave.native="()=>{setHover(null)}"
           @mouseenter.native="()=>{if(item.url!=curPath){setHover(index)}}"
           @on-close="handleClose(index)"
         >
-          {{item.name}}
+          {{item.name}}111111111111
         </Tag>
       </template>
     </div>
