@@ -24,14 +24,14 @@
     <CrudView ref='crudView' :tableOptions='tableOptions'>
       <template slot='toolbar'>
         <span style="padding-left: 10px"></span>
-        <i-button @click="runClick" type='ghost' shape='circle' icon='paper-airplane' :disabled='isMultiple'>执行
+        <i-button @click="runClick"  ghost type='primary'  shape='circle' icon='paper-airplane' :disabled='isMultiple'>执行
         </i-button>
-        <i-button @click="resumeClick" type='ghost' shape='circle' icon='play' :disabled='isMultiple'>运行
+        <i-button @click="resumeClick"  ghost type='primary'  shape='circle' icon='play' :disabled='isMultiple'>运行
         </i-button>
-        <i-button @click="pauseClick" type='ghost' shape='circle' icon='pause' :disabled='isMultiple'>暂停
+        <i-button @click="pauseClick"  ghost type='primary'  shape='circle' icon='pause' :disabled='isMultiple'>暂停
         </i-button>
         <span style="padding-left: 10px"></span>
-        <i-button @click="logClick" type='ghost' shape='circle' icon='clipboard' :disabled='isSingle'>执行日志
+        <i-button @click="logClick"  ghost type='primary'  shape='circle' icon='clipboard' :disabled='isSingle'>执行日志
         </i-button>
       </template>
     </CrudView>

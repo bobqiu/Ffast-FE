@@ -55,10 +55,10 @@
     </row>
     <row>
       <i-col span="24">
-        <i-button type='ghost' icon='folder' @click='save'>
+        <i-button  ghost type='primary'  icon='folder' @click='save'>
           保 存
         </i-button>
-        <i-button type='ghost' icon='eye' @click='show'>
+        <i-button  ghost type='primary'  icon='eye' @click='show'>
           预 览
         </i-button>
       </i-col>

@@ -32,12 +32,12 @@
       <!--顶部工具栏-->
       <div class='tree-toolbar'>
         <PermsValid :perms-name='createPerms'>
-          <Button size='small' shape='circle' type='ghost' icon='plus' @click='showCreate'>添加</Button>
+          <Button size='small' shape='circle'  ghost type='primary'  icon='plus' @click='showCreate'>添加</Button>
         </PermsValid>
 
         <PermsValid :perms-name='deletePerms'>
           <Poptip confirm title='您确认删除选中的内容吗？' @on-ok='treeDelData()' placement='bottom-start' transfer>
-            <i-button size='small' type='ghost' shape='circle' icon='trash-b' :disabled='!treeOptions.selected'>删除
+            <i-button size='small'  ghost type='primary'  shape='circle' icon='trash-b' :disabled='!treeOptions.selected'>删除
             </i-button>
           </Poptip>
         </PermsValid>
@@ -74,12 +74,12 @@
         <div style='padding:10px'>
           <div v-show='treeOptions.createMode'>
             <PermsValid :perms-name='createPerms'>
-              <Button shape='circle' type='ghost' icon='plus' @click='treeAddData()'>保存添加</Button>
+              <Button shape='circle'  ghost type='primary'  icon='plus' @click='treeAddData()'>保存添加</Button>
             </PermsValid>
           </div>
           <div v-show='treeOptions.selected && !treeOptions.createMode'>
             <PermsValid :perms-name='updatePerms'>
-              <i-button type='ghost' shape='circle' icon='edit' @click='treeEditData()'>保存修改</i-button>
+              <i-button  ghost type='primary'  shape='circle' icon='edit' @click='treeEditData()'>保存修改</i-button>
             </PermsValid>
           </div>
         </div>

@@ -101,14 +101,14 @@
   <div class="layout-header">
 
     <div style="padding: 6px 15px;float: left;cursor: pointer;" @click="toggleClick">
-      <Icon type="navicon" size="34"></Icon>
+      <Icon type="ios-apps" size="34"></Icon>
     </div>
     <div class="layout-header-right">
 
 
       <Poptip class="msg-list list-panel" placement="bottom-end" trigger="hover" @on-popper-show="tabPopperShow">
         <Badge :dot="isNewMsg">
-          <Icon type="ios-bell" size="24"></Icon>
+          <Icon type="ios-notifications-outline" size="24"></Icon>
         </Badge>
         <div class="api" slot="content">
           <Tabs class="tabs" v-model="tabIndex">
@@ -168,12 +168,17 @@
           </Tabs>
         </div>
       </Poptip>
-
+      <!--<Tooltip :content="更换主题"
+               placement="bottom" class="list-panel">
+        <Icon type="android-color-palette"
+              :size="24"></Icon>
+      </Tooltip>-->
+     <!-- <ColorPicker v-model="color3" alpha  type="ios-color-palette"/>-->
 
       <Dropdown class="user-panel list-panel">
 
 
-        <Avatar icon="person" size="small" style="background-color: #5c6b77"/>
+        <Avatar icon="ios-person" size="small" style="background-color: #5c6b77"/>
         <span class="user-name">{{userData.userName}}</span>
 
 
@@ -219,6 +224,7 @@
     props: ['toggleClick'],
     data () {
       return {
+        color3: 'rgba(25, 190,107, .5)',
         label1: (h) => {
           return h('div', [
             h('Badge', {

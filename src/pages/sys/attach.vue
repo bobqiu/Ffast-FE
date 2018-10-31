@@ -7,7 +7,7 @@
   <CrudView ref='crudView' :tableOptions='tableOptions'>
     <template slot='toolbar'>
       <Poptip confirm title="您确认删除选中的内容吗？" @on-ok="tableDelData()" placement="bottom-start" transfer>
-        <i-button type="ghost" shape="circle" icon="trash-b" :size="toolbarSize"
+        <i-button ghost type='primary' shape="circle" icon="trash-b" :size="toolbarSize"
                   :disabled="isMultiple">删除垃圾文件
         </i-button>
       </Poptip>

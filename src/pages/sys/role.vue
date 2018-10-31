@@ -23,7 +23,7 @@
 
         </DataTree>
       </Modal>
-      <i-button type='ghost' shape='circle' icon='ios-list-outline' @click='roleResEdit()' :disabled='isSingle'>角色资源
+      <i-button  ghost type='primary'  shape='circle' icon='ios-barcode' @click='roleResEdit()' :disabled='isSingle'>角色资源
       </i-button>
     </template>
   </CrudView>

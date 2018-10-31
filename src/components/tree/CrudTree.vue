@@ -16,10 +16,10 @@
       <!--增删改按钮-->
       <template v-if="this.treeOptions.editOptions">
         <PermsValid :perms-name="createPermsTree" v-if="treeOptions.createUrl">
-          <Button size="small" shape="circle" type="ghost" icon="plus" @click="treeAddData()">添加</Button>
+          <Button size="small" shape="circle" ghost type='primary' icon="ios-add"  @click="treeAddData()">添加</Button>
         </PermsValid>
         <PermsValid :perms-name="updatePermsTree" v-if="treeOptions.updateUrl">
-          <Button size="small" shape="circle" type="ghost" icon="edit" @click="treeEditData()"
+          <Button size="small" shape="circle" ghost type='primary' icon="ios-build" @click="treeEditData()"
                   :disabled="!treeOptions.selected">编辑
           </Button>
         </PermsValid>
@@ -36,13 +36,13 @@
       </template>
       <PermsValid :perms-name="deletePermsTree" v-if="treeOptions.deleteUrl" style="padding-top: 4px">
         <Poptip confirm title="您确认删除选中的内容吗？" @on-ok="treeDelData()" placement="bottom-start" transfer>
-          <Button type="ghost" size="small" shape="circle" icon="trash-b" @click="" :disabled="!treeOptions.selected">
+          <Button ghost type='primary' size="small" shape="circle" icon="ios-beaker" @click="" :disabled="!treeOptions.selected">
             删除
           </Button>
         </Poptip>
       </PermsValid>
 
-      <Button v-if="treeOptions.manageUrl" size="small" shape="circle" type="ghost" icon="android-create"
+      <Button v-if="treeOptions.manageUrl" size="small" shape="circle" ghost type='primary' icon="ios-walk"
               @click="$router.push(treeOptions.manageUrl);">管理
       </Button>
     </div>

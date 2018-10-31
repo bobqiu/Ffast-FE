@@ -8,7 +8,7 @@
     <template slot='toolbar'>
 
       <Poptip confirm title='您确认重置当前选中账号的密码吗？' @on-ok='roleResPassword()' placement='bottom-start' transfer>
-        <i-button type='ghost' shape='circle' icon='ios-locked-outline' :disabled='isSingle'>重置密码
+        <i-button  ghost type='primary'  shape='circle' icon='ios-lock' :disabled='isSingle'>重置密码
         </i-button>
       </Poptip>
 

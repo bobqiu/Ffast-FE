@@ -7,17 +7,17 @@
     <row>
       <PermsValid perms-name='user:create'>
 
-        <Button shape='circle' type='ghost' @click=''> user:create添加权限</Button>
+        <Button shape='circle'  ghost type='primary'  @click=''> user:create添加权限</Button>
       </PermsValid>
 
       <PermsValid perms-name='user:update'>
 
-        <Button shape='circle' type='ghost' @click=''>user:update更新权限</Button>
+        <Button shape='circle'  ghost type='primary'  @click=''>user:update更新权限</Button>
       </PermsValid>
 
       <PermsValid perms-name='user:delete'>
 
-        <Button shape='circle' type='ghost' @click=''>user:delete删除权限</Button>
+        <Button shape='circle'  ghost type='primary'  @click=''>user:delete删除权限</Button>
       </PermsValid>
 
       <PermsValid perms-name='user:list'>

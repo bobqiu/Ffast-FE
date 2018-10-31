@@ -71,7 +71,7 @@
                     <td><Input type="text" size="small" v-model="item.name" placeholder="参数名"></Input></td>
                     <td><Input type="text" size="small" v-model="item.value" placeholder="值"></Input></td>
                     <td>
-                      <Button type="ghost" size="small" @click="handleRemove(index)">删除</Button>
+                      <Button ghost type='primary' size="small" @click="handleRemove(index)">删除</Button>
                       </td>
                   </tr>
                 </template>
@@ -82,7 +82,7 @@
             </Row>
           </i-col>
           <i-col span="4">
-            <Button type="ghost" long icon="ios-search" @click="request">发 送</Button>
+            <Button ghost type='primary' long icon="ios-search" @click="request">发 送</Button>
           </i-col>
         </Row>
         <Row :gutter="10" style="padding-top: 20px">

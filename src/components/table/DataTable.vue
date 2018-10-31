@@ -47,7 +47,8 @@
   }
 
   .table-panel ::-webkit-scrollbar-thumb {
-    background-color: #f8f8f9;
+    //background-color: #f8f8f9;
+    background-color: #d4cece;
   }
 
 
@@ -67,9 +68,9 @@
         <slot name="toolbar"></slot>
       </div>
       <div style="float: right;padding-top: 8px" v-if="showSettingToolbar">
-        <Button type="ghost" size="small" @click="queryData" icon="loop"></Button>
+        <Button ghost type='primary' size="small" @click="queryData" icon="ios-refresh"></Button>
         <Poptip placement="bottom-end" width="200">
-          <Button size="small" type="ghost" icon="funnel"></Button>
+          <Button size="small" ghost type='primary' icon="ios-funnel"></Button>
           <div slot="content" style="margin: 5px 0">
             <div v-for="col in columns">
               <Checkbox @on-change="columnsChange"

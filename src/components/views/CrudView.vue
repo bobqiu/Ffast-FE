@@ -26,7 +26,7 @@
 <template>
   <Row class="curd-view main-view" :class="{'main-view-full': full}">
     <!--左边树-->
-    <i-col v-if="treeOptions" :xs="8" :sm="4" :md="4" :lg="3" class="curd-view-left-col"
+    <i-col v-if="treeOptions" :xs="8" :sm="4" :md="5" :lg="5" class="curd-view-left-col"
            :class="{'curd-view-full': full}">
       <CrudTree ref="crudTree" :treeOptions="treeOptions" @on-data-loaded="onTreeDataLoaded" @on-select="onTreeChange">
         <template slot="treeTop">
@@ -36,7 +36,7 @@
     </i-col>
     <!--左边树结束-->
     <!--右边信息栏-->
-    <i-col :xs="rightSpan(16)" :sm="rightSpan(20)" :md="rightSpan(20)" :lg="rightSpan(21)" :xs-offset="8" :sm-offset="8"
+    <i-col :xs="rightSpan(16)" :sm="rightSpan(20)" :md="rightSpan(19)" :lg="rightSpan(19)" :xs-offset="8" :sm-offset="8"
            :md-offset="8" :lg-offset="8" class="curd-view-right-col" :class="{'curd-view-full': full}">
       <template v-if="tableOptions">
         <!--数据表格开始-->

@@ -34,7 +34,7 @@
                  :label-width="tableOptions.searchLabelWidth">
       <template slot="append">
         <div :span="tableOptions.searchDynamic.length>1?3:1" style="padding: 1px 1px 0 0;"  :class="{'search-more': tableOptions.searchDynamic.length>1}">
-          <i-button type="ghost" icon="ios-search" @click="search">查询</i-button>
+          <i-button ghost type='primary' icon="ios-search" @click="search">查询</i-button>
           <i-button v-if="tableOptions.searchDynamic.length>1" type="text"
                     :icon="searchExpand?'ios-arrow-up':'ios-arrow-down'" @click="searchExpandClick">{{searchExpand?'收 起':'展 开'}}
           </i-button>
@@ -62,18 +62,19 @@
           <template v-if="deferred">
             <!--增删改按钮-->
             <PermsValid :perms-name="createPerms" v-if="tableOptions.createUrl">
-              <i-button type="ghost" shape="circle" :size="toolbarSize" icon="plus" @click="tableAddData()">添 加
+              <i-button ghost type='primary' shape="circle" :size="toolbarSize" icon="ios-add" @click="tableAddData()">添 加
               </i-button>
             </PermsValid>
             <PermsValid :perms-name="updatePerms" v-if="tableOptions.updateUrl">
-              <i-button type="ghost" shape="circle" :size="toolbarSize" icon="edit" @click="tableEditData()"
+              <i-button ghost type='primary' shape="circle" :size="toolbarSize" icon="ios-build" @click="tableEditData()"
                         :disabled="isSingle">编 辑
               </i-button>
             </PermsValid>
             <PermsValid :perms-name="deletePerms" v-if="tableOptions.deleteUrl">
               <Poptip confirm title="您确认删除选中的内容吗？" @on-ok="tableDelData()" placement="bottom-start" transfer>
-                <i-button type="ghost" shape="circle" icon="trash-b" :size="toolbarSize"
+                <i-button ghost type='primary' shape="circle" icon="ios-beaker" :size="toolbarSize"
                           :disabled="isMultiple">删 除
+                </i-button>
                 </i-button>
               </Poptip>
             </PermsValid>

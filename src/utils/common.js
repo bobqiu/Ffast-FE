@@ -53,6 +53,7 @@ export default {
     for (let i = 0; i < data.length; i++) {
       data[i].title = data[i][name];
       if (data[i].parentId == null || data[i].parentId == 0) {
+        console.log("data["+i+"]:" + data[i].children);
         result.push(data[i]);
       }
     }

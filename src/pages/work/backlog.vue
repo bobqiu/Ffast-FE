@@ -119,10 +119,10 @@
 
               <li><strong>详细内容：</strong><br><span>{{curBackLog.content}}</span></li>
               <div style="position: absolute;bottom: 20px">
-                <Button @click="finishClick(curBackLog)" icon="flag" type="ghost">
+                <Button @click="finishClick(curBackLog)" icon="flag" ghost type='primary'>
                   标记{{curBackLog.status == 1 ? '未完成' : curBackLog.status == 0 ? '已完成' : ''}}
                 </Button>
-                <Button @click="editClick" icon="edit" type="ghost">编 辑</Button>
+                <Button @click="editClick" icon="edit" ghost type='primary'>编 辑</Button>
               </div>
             </ul>
 

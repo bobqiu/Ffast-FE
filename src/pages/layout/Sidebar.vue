@@ -150,6 +150,7 @@
     },
     created: function () {
       this.menuData = common.constructTree(OperatorUtils.getMenuData(), 'name');
+      console.log("menuData:"+this.menuData.length);
       this.updateCurMenu();
     },
     computed: {},
@@ -165,6 +166,15 @@
           if (menu[i] != null && menu[i].url == path) {
             return menu[i];
           }
+        }
+      },
+      isThirdLeveMenu(child){
+        if(child.children){
+          if(child.children.length>0)return true;
+          else  return false;
+        }
+        else {
+          return false;
         }
       },
       updateCurMenu () {
